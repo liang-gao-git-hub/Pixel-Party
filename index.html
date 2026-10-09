@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixel Party — Browser Games</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="page-shell">
+    <header class="topbar">
+      <button class="brand" data-home aria-label="Back to Pixel Party home">
+        <span class="brand-mark">P</span><span>PIXEL <span class="brand-slash">PARTY</span></span>
+      </button>
+      <nav class="top-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-home>HOME</button>
+        <a class="nav-link" href="#games">GAMES</a>
+        <span class="status-pill"><i></i> LIVE ARCADE</span>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home-view" class="home-view">
+        <section class="hero">
+          <div class="hero-copy">
+            <h1>Pixel <span class="outline-word">Party</span></h1>
+          </div>
+          <div class="hero-art" aria-label="Arcade controller illustration" role="img">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="hero-console">
+              <div class="console-screen"><span>READY</span><b>!</b></div>
+              <div class="console-controls"><span class="d-pad"><i></i></span><span class="console-buttons"><i></i><i></i></span></div>
+            </div>
+          </div>
+          <span class="hero-note">03 GAMES</span>
+        </section>
+
+        <section id="games" class="games-section">
+          <div class="section-heading"><div><p class="eyebrow">// THE LINEUP</p><h2>CHOOSE YOUR<br /><span>CHALLENGE.</span></h2></div><p class="section-aside">Every game is browser-ready.<br />Your high score is the only thing<br />we ask you to bring.</p></div>
+          <div class="game-grid">
+            <article class="game-card card-pacman">
+              <div class="card-top"><span class="game-number">01</span><span class="game-tag">ARCADE / ACTION</span></div>
+              <div class="game-visual pacman-visual"><span class="maze-dots"></span><span class="maze-line line-a"></span><span class="maze-line line-b"></span><span class="pixel-pacman"></span><span class="pixel-ghost ghost-pink"></span><span class="pixel-ghost ghost-blue"></span><span class="fruit fruit-cherry">✦</span></div>
+              <div class="card-body"><h3>MAZE//RUNNER</h3><p>Eat. Upgrade. Escape. Ten levels of neon maze mayhem with new ghosts and fruit-powered abilities.</p><div class="card-footer"><span class="difficulty"><i></i><i></i><i></i><em>WARM UP</em></span><button class="play-button" data-game="pacman">PLAY NOW <b>→</b></button></div></div>
+            </article>
+            <article class="game-card card-2048">
+              <div class="card-top"><span class="game-number">02</span><span class="game-tag">PUZZLE / BRAIN</span></div>
+              <div class="game-visual tiles-visual"><span>2</span><span>4</span><span>8</span><span>16</span><span>32</span><span class="tile-plus">+</span></div>
+              <div class="card-body"><h3>2048//SHIFT</h3><p>Slide the grid, merge the numbers, chase the impossible tile. Easy to learn. Hard to put down.</p><div class="card-footer"><span class="difficulty"><i></i><i></i><i class="off"></i><em>THINKY</em></span><button class="play-button" data-game="2048">PLAY NOW <b>→</b></button></div></div>
+            </article>
+            <article class="game-card card-dino">
+              <div class="card-top"><span class="game-number">03</span><span class="game-tag">RUNNER / ENDLESS</span></div>
+              <div class="game-visual dino-visual"><svg class="dino-card-art" viewBox="0 0 40 40" aria-hidden="true"><g fill="#f3f0e9" shape-rendering="crispEdges"><rect x="13" y="0" width="18" height="3"/><rect x="11" y="3" width="22" height="10"/><rect x="10" y="10" width="27" height="5"/><rect x="8" y="15" width="18" height="4"/><rect x="5" y="19" width="22" height="8"/><rect x="1" y="18" width="9" height="4"/><rect x="2" y="22" width="8" height="4"/><rect x="4" y="26" width="6" height="4"/><rect x="8" y="27" width="5" height="10"/><rect x="19" y="27" width="5" height="10"/><rect x="7" y="36" width="8" height="3"/><rect x="18" y="36" width="8" height="3"/></g><g fill="#172329" shape-rendering="crispEdges"><rect x="15" y="4" width="2" height="2"/><rect x="22" y="15" width="10" height="2"/></g></svg><span class="dino-cactus cactus-tall"></span><span class="dino-cactus cactus-short"></span><span class="dino-rock"></span><span class="dino-sun">◐</span><span class="dino-ground"></span></div>
+              <div class="card-body"><h3>OFFLINE//ONLINE</h3><p>The no-wifi classic, now with more obstacles, faster runs, and an internet connection required.</p><div class="card-footer"><span class="difficulty"><i></i><i></i><i></i><em>FAST PACED</em></span><button class="play-button" data-game="dino">PLAY NOW <b>→</b></button></div></div>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section id="game-view" class="game-view hidden" aria-live="polite">
+        <div class="game-bar"><button class="back-button" data-home>← BACK TO ARCADE</button><div class="game-title"><span id="active-game-kicker">ARCADE / ACTION</span><h2 id="active-game-title">MAZE//RUNNER</h2></div><button id="pause-button" class="pause-button">Ⅱ PAUSE</button></div>
+        <div id="game-stage" class="game-stage"></div>
+      </section>
+    </main>
+    <footer><span>PIXEL PARTY © 2026</span><span>MADE FOR THE BETWEEN MOMENTS</span><span>NO ACCOUNTS. NO ADS. NO DRAMA.</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
